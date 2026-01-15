@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sayangkuuu🤍</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LOGIN -->
+<div id="login" class="screen">
+  <h1>💗 Selamat Datang Cintakuuu 💗</h1>
+  <input type="password" id="password" placeholder="Kata rahasia">
+  <button onclick="login()">Masuk</button>
+</div>
+
+<!-- MAIN -->
+<div id="main" class="screen hidden">
+  <h2>Aku Sayang Kamu 🤍</h2>
+
+  <!-- PESAN -->
+  <div id="message-box"></div>
+
+  <!-- GALERI -->
+  <div class="gallery">
+    <img src="img/foto1.jpg">
+    <img src="img/foto2.jpg">
+    <img src="img/foto3.jpg">
+    <img src="img/foto4.jpg">
+    <img src="img/foto5.jpg">
+  </div>
+
+  <!-- BONEKA CSS -->
+  <div class="boneka" onclick="showPopup()">
+    <div class="head"></div>
+    <div class="body"></div>
+  </div>
+
+  <!-- BUNGA CSS -->
+  <div class="flower">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <!-- POPUP -->
+  <div id="popup" class="hidden">
+    <p id="popup-text"></p>
+    <button onclick="closePopup()">Tutup</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
