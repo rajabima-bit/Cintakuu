@@ -1,0 +1,155 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffd6e8, #fff);
+  overflow: hidden;
+}
+
+/* SCREEN */
+.screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* LOGIN */
+input {
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  width: 220px;
+  margin: 10px;
+}
+
+button {
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  background: pink;
+  cursor: pointer;
+}
+
+/* PESAN */
+#message-box {
+  margin: 15px 0;
+  font-size: 18px;
+  text-align: center;
+  color: #ff5c8a;
+  min-height: 60px;
+  max-width: 320px;
+}
+
+/* GALERI */
+.gallery {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 120px;
+  border-radius: 15px;
+  transition: transform 0.3s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* LOVE */
+.love {
+  position: absolute;
+  animation: fall 5s linear forwards;
+}
+
+@keyframes fall {
+  from { transform: translateY(-50px); opacity: 1; }
+  to { transform: translateY(100vh); opacity: 0; }
+}
+
+/* BONEKA CSS */
+.boneka {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+  animation: goyang 2s infinite alternate;
+}
+
+.boneka .head {
+  width: 60px;
+  height: 60px;
+  background: #d8a46f;
+  border-radius: 50%;
+}
+
+.boneka .body {
+  width: 70px;
+  height: 80px;
+  background: #c68c53;
+  border-radius: 20px;
+  margin-top: -5px;
+}
+
+@keyframes goyang {
+  from { transform: rotate(-5deg); }
+  to { transform: rotate(5deg); }
+}
+
+/* BUNGA CSS */
+.flower {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  animation: spin 6s linear infinite;
+}
+
+.flower span {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background: pink;
+  border-radius: 50%;
+}
+
+.flower span:nth-child(1) { top: 0; left: 18px; }
+.flower span:nth-child(2) { top: 18px; left: 36px; }
+.flower span:nth-child(3) { top: 36px; left: 18px; }
+.flower span:nth-child(4) { top: 18px; left: 0; }
+.flower span:nth-child(5) {
+  top: 18px;
+  left: 18px;
+  background: yellow;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* POPUP */
+#popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  text-align: center;
+  z-index: 10;
+}
